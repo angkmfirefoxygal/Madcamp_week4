@@ -31,8 +31,7 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
           loginLink.onclick = async (event) => {
             event.preventDefault();
             if (confirm('로그아웃 하시겠습니까?')) {
-            //   const response = await fetch('/logout', { method: 'POST' });
-            //   //window.location.href = '/logout';
+        
             try {
             const response = await fetch('/logout', { method: 'POST' });
             if (response.ok) {
@@ -169,26 +168,10 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
         <li class="menu-item"><button>전체</button></li>
         <li class="menu-item"><a href="self_test.html"><button>알파메일 자가진단</button></a></li>
         <li class="menu-item"><a href="#" onclick="redirectTo30Days"><button>30days</button></a></li>
-        <li class="menu-item"><a href="news1.html"><button>알파 뉴스</button></a></li>
+        <li class="menu-item"><a href="news_main.html"><button>알파 뉴스</button></a></li>
     </ul>
 
     
-
-     <!-- 검색창 -->
-     <div class="search-bar">
-        <input type="text" placeholder="오늘의 알파 메일 이슈는?" />
-        <button>검색</button>
-    </div>
-
-
-    <!-- 자바스크립트 추가 -->
-    <script>
-        function handleSearch(event) {
-            event.preventDefault(); // 기본 폼 제출 동작 방지
-            const input = document.querySelector(".search-bar input").value;
-            alert(`검색어: ${input}`); // 검색어 처리
-        }
-    </script>
 
     <!-- 메인 컨텐츠 -->
     <main class="main-content">
@@ -198,30 +181,36 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
             <div class="stories-container">
                 <!-- 첫 번째 큰 기사 -->
                 <div class="main-story">
+                    <a href="news_main.html?article=1">
                     <img src="https://img.smlounge.co.kr/upload/NPFILE/202309/521945.jpg" alt="Main Story">
                     <div class="story-details-main">
-                        <span>패션 트렌드 | 2025.01.16</span>
+                        <span>패션 트렌드 | 2025.01.16</span><br>
                         <h3>아쿠아 디 파르마, 송강의 향을 담다</h3>
                     </div>
+                    </a>
                 </div>
         
                 <!-- 나머지 작은 기사 -->
                 <div class="side-stories">
                     <div class="story">
+                        <a href="news_main.html?article=2">
                         <img src="https://blog.kakaocdn.net/dn/bvCbmm/btqLzYWZXpZ/kmPvMEkXFy1Af6kEA7TZB0/img.jpg" alt="Story 1">
                         <div class="story-details">
                             <span>뷰티 트렌드</span>
                             <h4>2025년 새롭게 등장한 가장 우아한 향수!</h4>
                             <span>2025.01.17 | by 황혜원, Laura Solla</span>
                         </div>
+                        </a>
                     </div>
                     <div class="story">
+                        <a href="news_main.html?article=3">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYnpl2CjlDyLIiJ9d6CGYWIAIPg5ZQ6A7tMA&s" alt="Story 2">
                         <div class="story-details">
                             <span>패션 아이템</span>
                             <h4>올봄 유행할 컬러는 블랙이 아닙니다</h4>
                             <span>2025.01.17 | by 이소미</span>
                         </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -230,14 +219,45 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
         <!-- 검색어 랭킹 섹션 -->
         <aside class="ranking">
             <h2>실시간 검색어 랭킹</h2>
-            <ol>
-                <li>검색어 1</li>
-                <li>검색어 2</li>
-                <li>검색어 3</li>
-                <li>검색어 4</li>
-                <li>검색어 5</li>
-            </ol>
+            <ol id="ranking-list"></ol>
         </aside>
+
+        <script>
+            // 실시간 검색어 랭킹 가져오기
+            async function fetchRankings() {
+                try {
+                    const response = await fetch('http://localhost:5000/api/trending'); // Flask 서버 URL
+                    const rankings = await response.json();
+    
+                    const rankingList = document.getElementById('ranking-list');
+                    rankingList.innerHTML = ''; // 기존 리스트 초기화
+    
+                    rankings.forEach((keyword, index) => {
+            const listItem = document.createElement('li');
+            
+            // 숫자 인덱스를 <span> 태그로 추가
+            const indexSpan = document.createElement('span');
+            indexSpan.textContent = `${index + 1}`;
+            indexSpan.style.color = '#888'; // 회색 텍스트 색상
+            indexSpan.style.marginRight = '10px'; // 간격 추가
+            
+            // 리스트 아이템에 <span>과 텍스트 추가
+            listItem.appendChild(indexSpan);
+            listItem.appendChild(document.createTextNode(keyword));
+
+            rankingList.appendChild(listItem);
+        });
+                } catch (error) {
+                    console.error('Error fetching rankings:', error);
+                }
+            }
+    
+            // 페이지 로드 시 검색어 가져오기
+            window.onload = fetchRankings;
+    
+            // 1분마다 데이터 갱신
+            setInterval(fetchRankings, 60000); // 60초마다 갱신
+        </script>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

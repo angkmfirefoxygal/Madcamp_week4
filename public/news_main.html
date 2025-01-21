@@ -70,16 +70,21 @@
 
 .news-image {
     width: 150px;
-    height: auto;
+    height: 150px;
     margin-bottom: 10px;
 }
         h1, h3, h5 {
             margin: 0;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+     
+.highlight {
+    background-color: #E5DFEE; /* 강조 색상 */
+    /*border: 2px solid red; /* 테두리 강조 */
+}
+.article {
+    margin: 10px 0;
+}
+    
     </style>
 </head>
 <body>
@@ -89,6 +94,7 @@
         </div>        
         <a href="vogue_copy.html"><img src="home_icon.png" alt="로고"></a>
     </header>
+   
     <main>
         <div style="display: flex; flex-direction: column; gap: 5px;">
             <a href="https://www.coupang.com" target="_blank">
@@ -126,7 +132,7 @@
         <div>
             <article class="news-article">
                 <div class="news-content">
-                    <div onclick="window.location.href='news1.html';" class="news-title">
+                    <div class="article" data-article="1" onclick="window.location.href='news1.html';" class="news-title">
                         <h3>Daily Alpha | 001. 공진우</h3>
                     </div>
                     <h5>2025.1.20</h5>
@@ -136,7 +142,7 @@
             </article>
             <article class="news-article">
                 <div class="news-content">
-                    <div onclick="window.location.href='news2.html';" class="news-title">
+                    <div class="article" data-article="2" onclick="window.location.href='news2.html';" class="news-title">
                         <h3>Daily Alpha | 002. 고상혁</h3>
                     </div>
                     <h5>2025.1.21</h5>
@@ -146,7 +152,7 @@
             </article>
             <article class="news-article">
                 <div class="news-content">
-                    <h3>Daily Alpha | ?????</h3>
+                    <h3>Daily Alpha | 송강</h3>
                     <h5>2025.1</h5>
                     <p>Coming Soon.</p>
                 </div>
@@ -240,7 +246,28 @@
                 </div>
                 <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
             </article>
+            
+            
+           
         </div>
+
+        <script>
+            // URL에서 쿼리 매개변수 읽기
+            const params = new URLSearchParams(window.location.search);
+            const articleId = params.get('article'); // 클릭된 기사 ID
+    
+            // 모든 기사 가져오기
+            const articles = document.querySelectorAll('.article');
+    
+            if (articleId) {
+                articles.forEach(article => {
+                    if (article.dataset.article === articleId) {
+                        article.classList.add('highlight'); // 하이라이트 클래스 추가
+                        article.scrollIntoView({ behavior: 'smooth', block: 'center' }); // 해당 기사로 스크롤 이동
+                    }
+                });
+            }
+        </script>
         <div>
             <a href="https://www.musinsa.com/app/campaign/index/winteritem_2025_01?utm_source=/main/musinsa/recommend&utm_medium=main_display_big_banner&utm_campaign=21" target="_blank">
                 <img src="ad03.png" alt="" style="width: 340px; height: auto;">
