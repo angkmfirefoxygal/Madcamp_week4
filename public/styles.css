@@ -23,10 +23,7 @@ a {
 /* 검색어 랭킹 섹션 스타일 */
 .ranking {
     flex: 1; /* 유연한 크기 설정 */
-    background-color: #ffffff; /* 밝은 배경색 */
     padding: 15px; /* 내부 여백 줄이기 */
-    border-radius: 10px; /* 부드러운 모서리 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
     max-height: 500px; /* 최대 높이 설정 */
     max-width: 300px; /* 최대 너비 */
 }
@@ -45,10 +42,8 @@ a {
     font-size: 16px;
     font-weight: bold;
     font-family: sans-serif; /* Vogue 폰트 사용 */
-    
     color: #373638; /* 회색 번호 */
     transition: transform 0.2s ease, color 0.3s ease;
-    
     list-style: none;
     padding: 0;
 }
@@ -56,13 +51,8 @@ a {
 .ranking ol li {
     display: flex; /* 숫자와 텍스트를 나란히 배치 */
     align-items: center; /* 수직 정렬 */
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: sans-serif; /* Vogue 폰트 사용 */
-    
-    color: #373638; /* 회색 번호 */
-    transition: transform 0.2s ease, color 0.3s ease;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
 }
 
 .ranking ol li span {
@@ -83,7 +73,6 @@ a {
 .story-details-main h3, 
 .story-details span, 
 .story-details h4 {
-    transition: transform 0.3s ease; /* 부드럽게 변하도록 애니메이션 추가 */
     display: inline-block; /* transform이 제대로 작동하도록 설정 */
 }
 
