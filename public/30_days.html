@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
   <title>30-Day Challenge</title>
   <style>
   body {
@@ -11,29 +12,76 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #232323;
     height: 100vh; /* 화면 전체 높이 */
     margin: 0; /* 여백 제거 */
+    padding-top: 70px; /* header 높이를 고려한 여백 */
+    -ms-overflow-style: none;
+  }
+  ::-webkit-scrollbar {
+      display: none;
+    }
+  /* header 스타일: 화면 최상단에 고정 */
+  header {
+    position: fixed;
+    top: 0;
+    left: 52px;
+    width: 100%;
+    background-color: #232323; /* 배경 색상 */
+    text-align: center;
+  }
+  /* 이미지 레이어 설정 */
+  .background-image {
+    position: fixed; /* 화면에 고정 (스크롤해도 움직이지 않음) */
+    top: 50px;
+    left: 50px;
+    width: 1380px; /* 화면 전체 너비 */
+    height: 720px; /* 화면 전체 높이 */
+    object-fit: cover; /* 이미지 비율 유지하며 화면 채우기 */
+    z-index: -1; /* 가장 아래 레이어로 배치 */
   }
   .btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #212121;
-    color: white;
+    width: 100%;
+    max-width: 200px;
+    height: 60px;
+    font-family: 'Nanum Myeongjo', sans-serif;
+    font-size: 22px !important;
+    font-weight: bold;
+    color: rgb(255, 255, 255) !important;
+    background: linear-gradient(145deg, #232323, #060606); /* 분홍과 노랑 그라데이션 */
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: block;
   }
   .btn:disabled {
     background-color: #d3d3d3;
     cursor: not-allowed;
   }
+  .logo {
+    width: 150px;
+  } 
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .content {
+    position: relative;
+    padding-top: 100px; /* header의 높이를 고려하여 콘텐츠 위쪽에 여백 추가 */
+  }
 </style>
 </head>
 <body>
-  <h1 id="challenge-text">Welcome to the 30-Day Challenge!</h1>
-  <h3 id="challenge-detail">no!</h3>
+  <header class="page-header wrapper">
+    <h1><a href="thirty_days_main.html"><img class="logo" src="daily_alpha_dark.png" alt="test it"></a></h1>
+  </header>
+  <!-- 가장 아래 레이어에 배치할 이미지 -->
+  <img src="bg_thirty_days.png" alt="Background Image" class="background-image">
+
+  <h1 id="challenge-text" style="color: aliceblue; font-size: xx-large; font-family: 'Nanum Myeongjo', sans-serif;">Welcome to the 30-Day Challenge!</h1>
+  <h3 id="challenge-detail" style="color: aliceblue; font-family: 'Nanum Myeongjo', sans-serif;">no!</h3>
   <p id="day-info" style="visibility: hidden;">Day 0</p>
-  <button class="btn" id="check-button">출석체크</button>
+  <button class="btn" id="check-button" s>출석체크</button>
 
   <script>
     const texts = [

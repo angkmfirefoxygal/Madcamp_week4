@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="alpha.png">
+    <script async defer src="https://www.instagram.com/embed.js"></script>
     <title>뉴스 웹페이지</title>
     <style>
         body {
@@ -22,12 +24,12 @@
         }
         header a img {
             display: block;
-            width: 55px;
-            height: 55px;
+            width: 30px;
+            height: 30px;
         }
         header div {
             flex-grow: 1;
-            text-align: center;
+            text-align: left;
         }
         header h1 {
             margin: 0;
@@ -50,22 +52,27 @@
             margin-top: 20px;
             gap: 10px;
         }
-        article {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-            text-align: left;
-            margin-left: 5px;
-            margin-right: 5px;
-            margin-top: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-        article img {
-            width: 150px;
-            height: auto;
-            margin-left: 40px;
-            margin-bottom: 5px;
-        }
+        .news-article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.news-content {
+    margin-left: 25px;
+    margin-right: 480px;
+}
+
+.news-title {
+    cursor: pointer;
+}
+
+.news-image {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
         h1, h3, h5 {
             margin: 0;
         }
@@ -77,117 +84,181 @@
 </head>
 <body>
     <header>
-        <a href="vogue_copy.html"><img src="alpha.png" alt="로고" style="width: 55px; height: 55px;"></a>
         <div onclick="window.location.href='news_main.html';" style="cursor: pointer;">
             <h1>Alpha News</h1>
         </div>        
+        <a href="vogue_copy.html"><img src="home_icon.png" alt="로고"></a>
     </header>
     <main>
         <div style="display: flex; flex-direction: column; gap: 5px;">
-            <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
+            <a href="https://www.coupang.com" target="_blank">
+                <img src="ad01.png" alt="" style="width: 150px; height: auto;">
+            </a>
+            <a href="vogue_copy.html">
+                <img src="ad02.png" alt="" style="width: 150px; height: auto;">
+            </a>
+            <a href="test249.html" target="_blank">
+                <img src="ad05.png" alt="" style="width: 150px; height: auto;">
+            </a>
+            <a href="test249.html" target="_blank">
+                <img src="ad06.png" alt="" style="width: 150px; height: auto;">
+            </a>
+            <a href="vogue_copy.html">
+                <img src="ad02.png" alt="" style="width: 150px; height: auto;">
+            </a>
+            <a href="vogue_copy.html">
+                <img src="ad02.png" alt="" style="width: 150px; height: auto;">
+            </a>
+            <a href="https://www.tissotwatches.com/ko-kr" target="_blank">
+                <img src="ad07.png" alt="" style="width: 150px; height: auto;">
+            </a>
+            <a href="vogue_copy.html">
+                <img src="ad02.png" alt="" style="width: 150px; height: auto;">
+            </a>
+            <a href="https://www.coupang.com/" target="_blank">
+                <img src="ad04.png" alt="" style="width: 150px; height: auto;">
+            </a>
+            <a href="vogue_copy.html">
+                <img src="ad02.png" alt="" style="width: 150px; height: auto;">
+            </a>
         </div>
         
         <div>
-            <article>
-                <div style="margin-left: 25px">
-                    <div onclick="window.location.href='news1.html';" style="cursor: pointer;">
+            <article class="news-article">
+                <div class="news-content">
+                    <div onclick="window.location.href='news1.html';" class="news-title">
                         <h3>Daily Alpha | 001. 공진우</h3>
                     </div>
                     <h5>2025.1.20</h5>
                     <p>The 1st Alpha Male</p>
                 </div>
-                <img src="jin.jpg" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
+                <img src="jin.png" alt="첫 번째 뉴스 이미지" class="news-image">
             </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <div onclick="window.location.href='news2.html';" style="cursor: pointer;">
-                        <h3>Daily Aplha | 002. 고상혁</h3>
+            <article class="news-article">
+                <div class="news-content">
+                    <div onclick="window.location.href='news2.html';" class="news-title">
+                        <h3>Daily Alpha | 002. 고상혁</h3>
                     </div>
                     <h5>2025.1.21</h5>
                     <p>그저 대.상.혁</p>
                 </div>
-                <img src="ko.jpg" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
+                <img src="ko.jpg" alt="첫 번째 뉴스 이미지" class="news-image">
             </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
                     <p>Coming Soon.</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
             </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
                     <p>Coming Soon.</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
             </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
                     <p>Coming Soon.</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
             </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
                     <p>Coming Soon.</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
             </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
                     <p>Coming Soon.</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
             </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
                     <p>Coming Soon.</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
             </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
                     <p>Coming Soon.</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
             </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
                     <p>Coming Soon.</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
+            </article>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
+                    <p>Coming Soon.</p>
+                </div>
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
+            </article>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
+                    <p>Coming Soon.</p>
+                </div>
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
+            </article>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
+                    <p>Coming Soon.</p>
+                </div>
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
+            </article>
+            <article class="news-article">
+                <div class="news-content">
+                    <h3>Daily Alpha | ?????</h3>
+                    <h5>2025.1</h5>
+                    <p>Coming Soon.</p>
+                </div>
+                <img src="alpha.png" alt="첫 번째 뉴스 이미지" class="news-image">
             </article>
         </div>
         <div>
-            <img src="mbti_enfj.png" alt="" style="width: 300px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 300px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 300px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 300px; height: auto;">
-            <img src="mbti_enfj.png" alt="" style="width: 300px; height: auto;">
+            <a href="https://www.musinsa.com/app/campaign/index/winteritem_2025_01?utm_source=/main/musinsa/recommend&utm_medium=main_display_big_banner&utm_campaign=21" target="_blank">
+                <img src="ad03.png" alt="" style="width: 340px; height: auto;">
+            </a>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Cya_t_OpMF6/" data-instgrm-version="14">
+            </blockquote>
+            <a href="vogue_copy.html">
+                <img src="ad02.png" alt="" style="width: 340px; height: auto;">
+            </a>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CMCSICKFDhK/" data-instgrm-version="14">
+            </blockquote>
+            <a href="https://coupang.com" target="_blank">
+                <img src="ad04.png" alt="" style="width: 340px; height: auto;">
+            </a>
+            <a href="https://www.lincoln-korea.com/vehicle/continental/">
+                <img src="ad08.png" alt="" style="width: 340px; height: auto;">
+            </a>
+            
         </div>
         
     </main>
