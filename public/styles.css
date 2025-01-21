@@ -53,6 +53,7 @@ a {
     align-items: center; /* 수직 정렬 */
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
+    cursor: pointer; /* 커서를 포인터로 변경 */
 }
 
 .ranking ol li span {
@@ -96,6 +97,15 @@ a {
     padding: 15px 0; /* 위/아래 여백 설정 */
     margin: 0;
 }
+/* 하위 메뉴 컨테이너 */
+.sub-menu-container {
+    
+    margin-top: 2.2px; /* 살짝 겹치는 느낌을 위해 마진 조정 */
+    background-color: white; /* 배경색 */
+    padding: 0px 20px; /* 내부 여백 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 아래 그림자 */
+    z-index: 10; /* 다른 요소보다 위에 표시 */
+  }
 
 .menu-item {
     margin: 0 10px; /* 항목 간 간격 */
@@ -139,7 +149,27 @@ a {
     font-style: normal; /* 폰트 스타일 */
 }
 
+/*footer*/
 
+/* 전체 푸터 스타일 */
+.site-footer {
+    margin-top: 300px; /* 푸터와 매거진 사이의 간격 */
+    background-color: #333; /* 어두운 배경 */
+    color: #fff; /* 텍스트 색상 */
+    padding: 20px 0px 30px 30px ; /* 위아래 여백 */
+    font-size: 14px; /* 기본 글자 크기 */
+    line-height: 1.5;
+  }
+  
+  .site-footer a {
+    color: #aaa; /* 링크 색상 */
+    text-decoration: none;
+  }
+  
+  .site-footer a:hover {
+    color: #fff; /* 호버 시 색상 */
+    text-decoration: underline;
+  }
 /* 상단 고정 헤더 */
 .header {
     position: absolute; /* Swiper 안에서 위치 고정 */
