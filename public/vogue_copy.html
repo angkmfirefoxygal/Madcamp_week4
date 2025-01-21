@@ -245,6 +245,11 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
             listItem.appendChild(indexSpan);
             listItem.appendChild(document.createTextNode(keyword));
 
+            // 클릭 시 네이버 검색으로 이동
+            listItem.addEventListener('click', () => {
+                const searchUrl = `https://search.naver.com/search.naver?sm=whl_nht&query=${encodeURIComponent(keyword)}`;
+                window.open(searchUrl, '_blank'); // 새 탭에서 열기
+            });
             rankingList.appendChild(listItem);
         });
                 } catch (error) {
