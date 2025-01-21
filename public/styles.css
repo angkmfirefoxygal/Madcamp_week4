@@ -53,6 +53,7 @@ a {
     align-items: center; /* 수직 정렬 */
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
+    cursor: pointer; /* 커서를 포인터로 변경 */
 }
 
 .ranking ol li span {
@@ -98,8 +99,8 @@ a {
 }
 /* 하위 메뉴 컨테이너 */
 .sub-menu-container {
-    position: relative; /* 요소를 겹치도록 하기 위해 relative */
-    margin-top: -10px; /* 살짝 겹치는 느낌을 위해 마진 조정 */
+    
+    margin-top: 2.2px; /* 살짝 겹치는 느낌을 위해 마진 조정 */
     background-color: white; /* 배경색 */
     padding: 0px 20px; /* 내부 여백 */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 아래 그림자 */
