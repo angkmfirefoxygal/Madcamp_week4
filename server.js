@@ -1,5 +1,7 @@
 console.log("노드js 프로젝트 시작!!")
 const session = require('express-session');
+const mongoose = require('mongoose');
+require('dotenv').config();  // .env 파일 불러오기
 const dotenv = require('dotenv'); // dotenv 패키지 불러오기
 // .env 파일 로드
 dotenv.config();
@@ -10,13 +12,30 @@ const path = require('path');
 const KAKAO_REDIRECT_URI = process.env.REDIRECT_URI 
 const KAKAO_REST_API_KEY = process.env.KAKAO_REST_API_KEY 
 const KAKAO_TOKEN_URL = 'https://kauth.kakao.com/oauth/token';
+//const MONGODB_URI_PROD = process.env.MONGODB_URI_PROD; // MongoDB URI
 
 
-const connectDB = require('./db/connectDB'); // MongoDB 연결 파일
+const connectDB = async () => {
+  try {
+      await mongoose.connect(process.env.MONGODB_URI_PROD, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+      });
+      console.log('MongoDB Connected');
+  } catch (error) {
+      console.error(error);
+      process.exit(1);  // 연결 실패 시 서버 종료
+  }
+};
+
+connectDB();  // MongoDB 연결 호출
+
+//const connectDB = require('./db/connectDB'); // MongoDB 연결 파일
 const userRoutes = require('./routes/users'); // 사용자 라우트
 const User = require('./models/User'); // 정확한 경로 확인
 const getUserInfo = require('./services/kakaoService'); // 카카오 API 요청 서비스
 const saveOrUpdateUser = require('./services/userService'); // 사용자 데이터 저장 서비스
+const mongoURI = process.env.MONGODB_URI_PROD; // MongoDB URI
 
 
 const app = express();
