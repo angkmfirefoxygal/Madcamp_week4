@@ -207,7 +207,6 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
             <ol style="margin-left: 20px; margin-right: 20px;" id="ranking-list"></ol>
         </aside>
 
-        
         <script>
             // 실시간 검색어 랭킹 가져오기
             async function fetchRankings() {
@@ -230,12 +229,6 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
             // 리스트 아이템에 <span>과 텍스트 추가
             listItem.appendChild(indexSpan);
             listItem.appendChild(document.createTextNode(keyword));
-
-            // 클릭 시 네이버 검색으로 이동
-            listItem.addEventListener('click', () => {
-                const searchUrl = `https://search.naver.com/search.naver?sm=whl_nht&query=${encodeURIComponent(keyword)}`;
-                window.open(searchUrl, '_blank'); // 새 탭에서 열기
-            });
 
             // 클릭 시 네이버 검색으로 이동
             listItem.addEventListener('click', () => {
@@ -342,4 +335,5 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
   </footer>
 
 </body>
+
 </html>
