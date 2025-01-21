@@ -152,7 +152,7 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
     <ul class="sub-menu">
       <li class="menu-item"><button>전체</button></li>
       <li class="menu-item"><a href="self_test.html"><button>알파메일 자가진단</button></a></li>
-      <li class="menu-item"><a href="#" onclick="redirectTo30Days()"><button>30days</button></a></li>
+      <li class="menu-item"><a href="#" id="goTo30DaysButton"><button>30days</button></a></li>
       <li class="menu-item"><a href="news_main.html"><button>알파 뉴스</button></a></li>
     </ul>
     </ul>
@@ -289,7 +289,7 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
             const data = await response.json();
       
             if (data.isLoggedIn) {
-              window.location.href = '30_days.html';
+              window.location.href = 'thirty_days_main.html';
             } else {
               alert('로그인 후 이용할 수 있는 기능입니다.');
               window.location.href = 'kakaoLogin.html';
@@ -323,6 +323,42 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
           });
         }
       });
+</script>
+<script>
+    // 새로운 함수 정의
+function goTo30Days() {
+  try {
+    fetch('/api/login-status')
+      .then(response => response.json())
+      .then(data => {
+        if (data.isLoggedIn) {
+          window.location.href = 'thirty_days_main.html';  // 로그인 되어 있을 때 30days 페이지로 리디렉션
+        } else {
+          alert('로그인 후 이용할 수 있는 기능입니다.');
+          window.location.href = 'kakaoLogin.html';  // 로그인 안 되어 있을 때 로그인 페이지로 리디렉션
+        }
+      })
+      .catch(error => {
+        console.error('로그인 상태 확인 중 오류 발생:', error);
+        alert('서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+      });
+  } catch (error) {
+    console.error('로그인 상태 확인 중 오류 발생:', error);
+    alert('서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+  }
+}
+
+// 이벤트 리스너를 사용하여 버튼 클릭 처리
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.getElementById('goTo30DaysButton');
+  
+  if (button) {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();  // 기본 동작 방지 (링크 이동 방지)
+      goTo30Days();  // goTo30Days 함수 호출
+    });
+  }
+});
 </script>
 <footer class="site-footer">
     <div class="footer-middle">
