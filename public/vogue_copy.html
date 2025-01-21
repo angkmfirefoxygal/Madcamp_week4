@@ -58,35 +58,7 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
     });
 </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        async function redirectTo30Days() {
-          try {
-            const response = await fetch('/api/login-status');
-            const data = await response.json();
-      
-            if (data.isLoggedIn) {
-              window.location.href = '30_days.html';
-            } else {
-              alert('로그인 후 이용할 수 있는 기능입니다.');
-              window.location.href = 'kakaoLogin.html';
-            }
-          } catch (error) {
-            console.error('로그인 상태 확인 중 오류 발생:', error);
-            alert('서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
-          }
-        }
-      
-        // 30days 링크에 이벤트 연결
-        const menuItem = document.querySelector('.menu-item a[href="#"]');
-        if (menuItem) {
-          menuItem.addEventListener('click', (e) => {
-            e.preventDefault(); // 기본 동작 방지
-            redirectTo30Days();
-          });
-        }
-      });
-</script>
+
 
 
   
@@ -137,7 +109,11 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
                     
                     <a href="#">main</a>
                     <a href="self_test.html">self test</a>
-                    <a href="#" onclick="redirectTo30days()">30days</a>
+                    <li class="menu-item">
+                        <a href="#" onclick="redirectTo30days()">
+                            30days
+                        </a>
+                    </li>
                     <a href="news1.html">news</a>
                    
                 </nav>
@@ -164,13 +140,22 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
     </div>
 
     <!-- 하위 메뉴 -->
-    <ul class="sub-menu">
+    <!-- <ul class="sub-menu">
         <li class="menu-item"><button>전체</button></li>
         <li class="menu-item"><a href="self_test.html"><button>알파메일 자가진단</button></a></li>
         <li class="menu-item"><a href="#" onclick="redirectTo30Days"><button>30days</button></a></li>
         <li class="menu-item"><a href="news_main.html"><button>알파 뉴스</button></a></li>
-    </ul>
+    </ul> -->
 
+    <!-- 하위 메뉴 -->
+    <div class="sub-menu-container">
+    <ul class="sub-menu">
+      <li class="menu-item"><button>전체</button></li>
+      <li class="menu-item"><a href="self_test.html"><button>알파메일 자가진단</button></a></li>
+      <li class="menu-item"><a href="#" onclick="redirectTo30Days()"><button>30days</button></a></li>
+      <li class="menu-item"><a href="news_main.html"><button>알파 뉴스</button></a></li>
+    </ul>
+    </div>
     
 
     <!-- 메인 컨텐츠 -->
@@ -204,7 +189,7 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
                     </div>
                     <div class="story">
                         <a href="news_main.html?article=3">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYnpl2CjlDyLIiJ9d6CGYWIAIPg5ZQ6A7tMA&s" alt="Story 2">
+                        <img src="https://esteemgroup.com/wp-content/uploads/2022/11/HONG-TAE-JUN-12-788x1024.jpg" alt="Story 2">
                         <div class="story-details">
                             <span>패션 아이템</span>
                             <h4>올봄 유행할 컬러는 블랙이 아닙니다</h4>
@@ -291,6 +276,58 @@ integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90n
         });
     </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        async function redirectTo30Days() {
+          try {
+            const response = await fetch('/api/login-status');
+            const data = await response.json();
+      
+            if (data.isLoggedIn) {
+              window.location.href = '30_days.html';
+            } else {
+              alert('로그인 후 이용할 수 있는 기능입니다.');
+              window.location.href = 'kakaoLogin.html';
+            }
+          } catch (error) {
+            console.error('로그인 상태 확인 중 오류 발생:', error);
+            alert('서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+          }
+        }
+
+        // 이벤트 리스너로 onclick 동작 처리
+        document.querySelector('a[href="#"][onclick]').addEventListener('click', (e) => {
+            e.preventDefault(); // 기본 동작(페이지 리로드) 방지
+            redirectTo30days();
+        });
+
+        const menuLink = document.querySelector('.menu-link');
+        if (menuLink) {
+        menuLink.addEventListener('click', (e) => {
+        e.preventDefault(); // 기본 동작 방지
+        redirectTo30days();
+        });
+        }
+      
+        // 30days 링크에 이벤트 연결
+        const menuItem = document.querySelector('.menu-item a[href="#"]');
+        if (menuItem) {
+          menuItem.addEventListener('click', (e) => {
+            e.preventDefault(); // 기본 동작 방지
+            redirectTo30Days();
+          });
+        }
+      });
+</script>
+<footer class="site-footer">
+    <div class="footer-middle">
+      <p>04310 서울특별시 용산구 청파로47길 100(청파동2가) Daily Alpha </p>
+      <p>T. 02-710-9114 &nbsp;&nbsp;|&nbsp;&nbsp; F. 02-718-2337</p>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © Daily Alpha. All Rights Reserved.</p>
+    </div>
+  </footer>
 
 </body>
 

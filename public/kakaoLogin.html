@@ -104,12 +104,13 @@
     }
 
     .input-group input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
+    width: 100%; /* 입력 필드가 컨테이너 안에 맞도록 */
+    padding: 10px; /* 안쪽 여백 */
+    font-size: 16px; /* 텍스트 크기 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* 박스 모델을 경계 안쪽으로 */
     }
-
     .checkbox-group {
       display: flex;
       align-items: center;
