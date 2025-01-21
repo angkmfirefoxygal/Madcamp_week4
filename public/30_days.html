@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30-Day Challenge</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* 화면 전체 높이 */
+    margin: 0; /* 여백 제거 */
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #212121;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  .btn:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+  }
+</style>
+</head>
+<body>
+  <h1 id="challenge-text">Welcome to the 30-Day Challenge!</h1>
+  <h3 id="challenge-detail">no!</h3>
+  <p id="day-info" style="visibility: hidden;">Day 0</p>
+  <button class="btn" id="check-button">출석체크</button>
+
+  <script>
+    const texts = [
+        "Day 0: Start your journey",
+        "Day 1: 메타인지 기르기",
+        "Day 2: 구석구석 씻기",
+        "Day 3: 운동 시작하기",
+        "Day 4: 미용실 가서 다운펌하기",
+        "Day 5: 새 옷 쇼핑하기",
+        "Day 6: 자신감 있는 자세 연습",
+        "Day 7: 피드백 수용하기",
+        "Day 8: 새로운 환경에 나가기",
+        "Day 9: 현실세계에 발 붙이기",
+        "Day 10: 눈치 기르기",
+        "Day 11: 밈 공부하기",
+        "Day 12: 일일히 지적하지 않기",
+        "Day 13: 감정을 컨트롤하기",
+        "Day 14: 마음에 여유 가지기",
+        "Day 15: 새로운 일 경험하기",
+        "Day 16: 남들을 존중하기",
+        "Day 17: 말투 신경쓰기",
+        "Day 18: 다른 사람 분석하기",
+        "Day 19: 긍정적으로 사고하기",
+        "Day 20: 행동에 책임감 갖기",
+        "Day 21: 남 탓 하지 않기",
+        "Day 22: 집착하지 않기",
+        "Day 23: 선 넘지 않기",
+        "Day 24: 불필요한 도파민 끊기",
+        "Day 25: 자신의 일에 몰두하기",
+        "Day 26: 책 읽기",
+        "Day 27: 반면교사 프로젝트",
+        "Day 28: 다양한 관점에서 생각하기",
+        "Day 29: 한 달을 되돌아보기",
+        "Day 30: 잘생기기"
+      // Add up to 30 days
+    ];
+    const detail_texts = [
+        "Welcome to 30 days to Alpha",
+        "알파메일 자가진단 화면으로 이동, 본인을 돌아볼 수 있는 기회를 가지기.",
+        "참고) 세탁할 땐 \"섬유유연제\"라는 것을 사용할 수 있다는 놀라운 사실<br><br>남성 그루밍 유튜버의 숏츠를 시청해보세요! 관리의 세계는 방대합니다.",
+        "체력과 미용을 위해 운동을 시작해보세요",
+        "나에게 어울리는 헤어스타일 찾아보기<br><br>→ daily alpha 인스타그램에 접속하면 다양한 남성의 헤어스타일을 릴스로 확인할 수 있습니다",
+        "옷만 잘 입어도 이미지가 달라보입니다.<br><br>최소 상 하의 한 벌씩 구매하세요. 주우재의 남성패션 참견 영상을 보며 스스로를 성찰하십쇼.",
+        "허리와 어깨를 펴고 30분 동안 유지해보세요",
+        "다른 사람의 말을 들어보세요.<br><br>분명히 당신이 잘못했을 겁니다.",
+        "제발!!!<br><br>→ 동아리에 가입해볼까요?",
+        "안에 사람들이 있잖아!!<br><br>→ *일상의 센스 기르기* : 울고 있는 사람에게 냅킨을 건네보세요! 😢",
+        "아직도 몰라<br><br>→ 카네기의 인간 관계론 책을 추천합니다",
+        "최신 트렌드를 알아야 대화에 참여할 수 있습니다.",
+        "정말 꼴불견입니다<br><br>→ 반박하지 마세요. 그저 그들의 의견을 경청하면 됩니다.",
+        "그렇게 화날 일 아니죠? 쒸익쒸익 금지~ ",
+        "조급하면 될 일도 안 됩니다. 습관을 형성하는 데에는 2주의 시간이걸려요.<br><br>→ 명상을 해볼까요?",
+        "평소에 도전하지 않았던 일을 해보세요.<br><br>→ 오늘은 등산, 어떨까요?",
+        "주위 사람들이 존중받고 있다,<br>소중하게 여겨지고 있다고 느낄 수 있도록 행동하세요<br><br>그러나 본인을 낮추는 것은 금물!",
+        "말투에 따라 의도와 다르게 전달될 수 있습니다",
+        "다른 사람들이 무슨 이유로 인기가 있는지 생각해보세요.<br><br>삐딱하게 생각하지 말구요~",
+        "긍정적인 마인드는 자신 뿐만 아니라 주변 사람들끼리 동화시킵니다.<br><br>오 히 려 좋 아",
+        "사소한 일에도 책임을 가져야 합니다.",
+        "남 탓 하지 마세요",
+        "알파메일은 집착하지 않습니다",
+        "적당히 지켜야할 선이 있습니다",
+        "알파메일이 되면 도파민은 일상입니다",
+        "아니 그 일은 말고요...",
+        "책 책 책을 읽읍시다",
+        "과거의 자신과 마주하세요. 분명 달라진 게 있을 겁니다",
+        "이분법적인 사고는 원숭이도 할 수 있습니다",
+        "한 달 동안 잘 지키셨나요?",
+        "ㅋ"
+      // Add up to 30 days
+    ];
+
+    const MAX_DAYS = texts.length;
+
+
+    // 로그인 상태 확인
+    async function checkLoginStatus() {
+    try {
+    const response = await fetch('/api/auth-status');
+    const data = await response.json();
+
+    if (!data.isLoggedIn) {
+      alert('로그인이 필요합니다.');
+      window.location.href = 'kakaoLogin.html'; // 로그인 페이지로 리디렉션
+    } else {
+      console.log('로그인 상태 확인 완료:', data);
+    }
+  } catch (error) {
+    console.error('로그인 상태 확인 실패:', error);
+    alert('서버 오류가 발생했습니다. 다시 시도해주세요.');
+  } 
+  }
+
+
+    // 서버로 출석 체크 요청
+    async function checkIn() {
+      try {
+        const response = await fetch('/api/check-in', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          alert(result.message); // 출석 체크 성공 메시지
+          const data = loadProgress(); // 로컬 데이터 불러오기
+          data.currentDay = result.currentDay; // 서버 응답으로 업데이트
+          saveProgress(data); // 로컬 데이터 갱신
+          updateUI(data); // UI 업데이트
+        } else {
+          alert(result.message); // 서버 에러 메시지
+        }
+      } catch (error) {
+        console.error('출석 체크 요청 실패:', error);
+        alert('서버 오류가 발생했습니다. 다시 시도해주세요.');
+      }
+    }
+
+
+
+    function getNextActivationTime() {
+      const now = new Date();
+      const nextActivation = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 0, 0, 0); // Today at 5 PM
+      if (now >= nextActivation) {
+        // If current time is past today's 5 PM, set it to tomorrow's 5 PM
+        nextActivation.setDate(nextActivation.getDate() + 1);
+      }
+      return nextActivation.toISOString();
+    }
+
+    function loadProgress() {
+      const savedData = JSON.parse(localStorage.getItem("challengeData"));
+      if (savedData) {
+        const currentTime = new Date();
+        const nextActivation = new Date(savedData.nextActivation);
+
+        // Enable the button if it's past the next activation time
+        if (currentTime >= nextActivation) {
+          savedData.buttonDisabled = false;
+        }
+        return savedData;
+      }
+      return { currentDay: 0, nextActivation: getNextActivationTime(), buttonDisabled: false };
+    }
+
+    function saveProgress(data) {
+      localStorage.setItem("challengeData", JSON.stringify(data));
+    }
+
+    function updateUI(data) {
+  document.getElementById("challenge-text").textContent = texts[data.currentDay];
+  document.getElementById("challenge-detail").innerHTML = detail_texts[data.currentDay];
+  document.getElementById("day-info").textContent = `Day ${data.currentDay}`;
+  document.getElementById("check-button").disabled = data.buttonDisabled;
+  }
+
+
+
+    async function fetchUserProgress() {
+    try {
+      const response = await fetch("/api/progress", {
+      method: "GET",
+      headers: { "Cache-Control": "no-cache" },
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      return data; // 서버에서 currentDay 등 데이터를 반환
+      console.log('Fetched Progress:', userData);
+    } else {
+      console.error('데이터를 가져오는 데 실패했습니다.');
+    }
+  } catch (error) {
+    console.error('서버 오류:', error);
+  }
+  return null;
+  }
+
+  document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("/api/progress");
+    if (response.ok) {
+      const userData = await response.json();
+      console.log("초기 데이터 로드 성공:", userData);
+      updateUI(userData);
+    } else {
+      console.error("초기 데이터 로드 실패:", response.statusText);
+    }
+  } catch (error) {
+    console.error("초기 데이터 요청 중 오류 발생:", error);
+  }
+});
+
+
+    document.getElementById("check-button").addEventListener("click", async () => {
+  try {
+    // 서버로 출석 체크 요청 전송
+    const response = await fetch("/api/check-in", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log("출석 체크 성공:", result);
+
+      // 서버에서 반환된 currentDay로 UI 업데이트
+      updateUI(result);
+    } else {
+      console.error("출석 체크 실패:", response.statusText);
+      alert("출석 체크 실패: 다시 시도해주세요.");
+    }
+  } catch (error) {
+    console.error("출석 체크 요청 중 오류 발생:", error);
+    alert("서버 오류가 발생했습니다. 다시 시도해주세요.");
+  }
+});
+
+
+    // Initialize the page
+    const initialData = loadProgress();
+    updateUI(initialData);
+  </script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<html lang="ko">
+<head>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>상남자 테스트</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+<style>
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'ChosunGu', sans-serif;
+}
+.logo {
+    width: 150px;
+    margin-top: 28px;
+}
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+.main-nav a{
+    color: #c7c7c7;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+.main-nav a:hover {
+    color: #000000;
+}
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}   
+article{
+    display: flex;
+    flex-direction: column;
+} 
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+}
+.progress-bar {
+    background-color: #464644;
+}
+.progress {
+    background-color: #ffffff;
+}
+#img{
+    width: 500px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_main{
+    width: 720px;
+    height: 480px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#question-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.question-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.custom-jelly-button {
+    width: 100%;
+    max-width: 350px;
+    height: 60px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 18px !important;
+    font-weight: bold;
+    color: black !important;
+    background: linear-gradient(145deg, #dbdbdb, #a7a7a7); /* 분홍과 노랑 그라데이션 */
+    border: none;
+    border-radius: 17px;
+    box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.7), 
+                inset 4px 4px 10px rgba(0, 0, 0, 0.1),
+                2px 2px 8px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    display: block;
+}
+
+.custom-jelly-button:hover {
+    background: linear-gradient(145deg, #7a7a7a, #464646); /* 반대로 그라데이션 */
+}
+
+.jelly-question-box {
+    width: 100%;
+    max-width: 400px;
+    min-height: 150px;
+    padding: 30px 20px;
+    margin: 20px auto;
+    background: linear-gradient(145deg, #ffc1cc, #ff91a1); /* 진한 분홍색으로 변경 */
+    border-radius: 25px;
+    box-shadow: inset -6px -6px 12px rgba(255, 255, 255, 0.8), 
+                inset 6px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #432;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* h6 요소의 폰트 크기 강제 적용 */
+.jelly-question-box h6 {
+    font-size: 18px !important;
+    margin-top: 40px;
+}
+    
+.btn-info.focus, .btn-info:focus {
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+.btn-info:hover {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+.btn-info.focus, .btn-info:focus {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+.btn-info {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+     
+.at-share-btn-elements{
+    text-align: center;
+}
+.share{
+    margin: 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.kakao_ad2{
+    width: 320px;
+    margin: 0 auto;
+}
+ 
+.custom-button {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+</style>
+
+</head>
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+            
+    <header class="page-header wrapper">
+        <h1><a href="self_test.html"><img class="logo" src="alpha_test.png" alt="test it"></a></h1>
+        <nav>
+            <u1 class="main-nav">
+                <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+                <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+                <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+            </u1>
+        </nav>  
+    </header>
+
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#fed7e0">
+
+     <!--시작화면-->
+    <article class="start">
+        <img id="img_main" class="mt-5" src="coolguy_test_main.png">
+    <button type="button" class="btn btn-info mt-5 custom-jelly-button" onclick="start();" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 197, 197); border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">테스트 시작하기</button>
+    </article>
+    <!--문제화면-->
+    <article class="question">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/30*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h6 style="font-weight: bold; color: black; font-size: x-large;" class="text-center mt-5" id="title">문제</h6>
+        <input id="type" type="hidden" value="AlPha">
+          <button id="A" type="button" class="btn btn-info mt-5 custom-jelly-button" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 245, 174); border-color: rgb(255, 249, 57); width: 350px; height: 50px; margin: 0 auto; display: block;">Primary</button>
+    <button id="B" type="button" class="btn btn-info mt-3 custom-jelly-button" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 245, 174); border-color: rgb(255, 249, 57); width: 350px; height: 50px; margin: 0 auto; display: block;">Primary</button>
+    </article>
+    <!--결과화면-->
+    <article class="result">
+        <img id="img" class="mt-5" src="" alt="animal">
+        
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_inline_share_toolbox_ougq mt-3"></div>
+                
+        <button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick="location.href='test250.html'" style="font-size:large; font-weight: bold;">다시 해보기</button>
+        <button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick="location.href='index.html'" style="font-size:large; font-weight: bold;">다른 테스트 해보기</button>
+    </article>
+                        
+  
+   
+
+
+<!-- <article class="coupang_ad mt-3"> -->
+<!-- <script src="https://ads-partners.coupang.com/g.js"></script> -->
+<script>
+	new PartnersCoupang.G({"id":798186,"template":"carousel","trackingCode":"AF4391881","width":"350","height":"140","tsource":""});
+</script>
+        
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <!--각 타입의 점수를 저장하는 input 태그(hidden으로 안보임)-->
+    <input type="hidden" id="AlPha" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        // 문제 번호를 나타내는 num 변수
+          var num = 1;
+        // 문제 번호별 질문을 저장하는 자바스크립트 객체 q
+             var q = {
+                1: {"title": "빗물 마심", "type": "AlPha", "A": "O", "B": "X"},
+
+                2: {"title": "거울을 신기해함", "type": "AlPha", "A": "O", "B": "X"},
+
+                3: {"title": "컴퓨터 할 줄 모름", "type": "AlPha", "A": "O", "B": "X"},
+
+                4: {"title": "알에서 태어남", "type": "AlPha", "A": "O", "B": "X"},
+
+                5: {"title": "안약 대신 불닭소스를 넣음", "type": "AlPha", "A": "O", "B": "X"},
+
+                6: {"title": "통화가 끝나면 전화를 부숨", "type": "AlPha", "A": "O", "B": "X"},
+
+                7: {"title": "현상금 걸려 있음", "type": "AlPha", "A": "O", "B": "X"},
+
+                8: {"title": "바지 안 입음", "type": "AlPha", "A": "O", "B": "X"},
+
+                9: {"title": "대리석 덮고 잠", "type": "AlPha", "A": "O", "B": "X"},
+
+                10: {"title": "글을 못 읽음", "type": "AlPha", "A": "O", "B": "X"},
+
+                11: {"title": "직접 사냥한 고기만 먹음", "type": "AlPha", "A": "O", "B": "X"},
+
+                12: {"title": "출생신고 안 되어 있음", "type": "AlPha", "A": "O", "B": "X"},
+
+                13: {"title": "추우면 지폐를 태움", "type": "AlPha", "A": "O", "B": "X"},
+
+                14: {"title": "3층 이하는 뛰어내림", "type": "AlPha", "A": "O", "B": "X"},
+
+                15: {"title": "가끔 중환자실에서 깨어남", "type": "AlPha", "A": "O", "B": "X"},
+
+                16: {"title": "말을 길들여 타고 다님", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                17: {"title": "밥상에 고기 없으면 안 먹음", "type": "AlPha", "A": "O", "B": "X"},
+
+                18: {"title": "가방, 지갑 안 씀", "type": "AlPha", "A": "O", "B": "X"},
+
+                19: {"title": "저축/주식/코인 안 함", "type": "AlPha", "A": "O", "B": "X"},
+
+                20: {"title": "이름 세 글자 이상인 음료 안 마심", "type": "AlPha", "A": "O", "B": "X"},
+
+                21: {"title": "머리길이 3cm 이하임", "type": "AlPha", "A": "O", "B": "X"},
+
+                22: {"title": "핸드폰은 한 번 쓰고 부셔버림", "type": "AlPha", "A": "O", "B": "X"},
+
+                23: {"title": "아이디/캐릭터명 지을 때<br>주먹으로 키보드 두 번 내리침", "type": "AlPha", "A": "O", "B": "X"},
+
+                24: {"title": "초졸임", "type": "AlPha", "A": "O", "B": "X"},
+
+                25: {"title": "벽돌 베고 잠", "type": "AlPha", "A": "O", "B": "X"},
+
+                26: {"title": "한 쪽 눈을 가로지르는 흉터가 있음", "type": "AlPha", "A": "O", "B": "X"},
+
+                27: {"title": "엄마 부를 때 이름으로 부름", "type": "AlPha", "A": "O", "B": "X"},
+
+                28: {"title": "에어컨, 히터, 보일러 안 틈", "type": "AlPha", "A": "O", "B": "X"},
+
+                29: {"title": "집에서 팬티 외의<br>다른 의복을 걸치지 않음", "type": "AlPha", "A": "O", "B": "X"},
+
+                30: {"title": "핸드폰으로 카톡/문자/인터넷<br>안하고 전화만 함", "type": "AlPha", "A": "O", "B": "X"},
+        }
+
+        // MBTI 결과별 동물&설명을 저장하는 자바스크립트 객체 result
+        var result = {
+            "Alpha": {"img":"result_10high.png"},
+            "Alpha_u": {"img":"result_high.png"},
+            "Balance": {"img":"result_normal.png"},
+            "Alppano_u": {"img":"result_low.png"},
+            "Alppano": {"img":"result_10low.png"},
+        }
+        // 시작 버튼을 클릭하면 시작화면 숨기고 질문화면 보여주기
+        function start(){
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        // A 버튼 클릭하면 해당 타입 값을 가져와서 값 1 증가 후 next()
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        // B 버튼 클릭하면 값 증가 없이 next()
+        $("#B").click(function(){
+            next();
+        });
+        function next(){
+            // 마지막 문제인 경우
+            if(num==31){
+                // 질문은 숨기고 결과 화면 보여주기
+                $(".question").hide();
+                $(".result").show();
+
+                var mbti = "";
+                var alphaValue = parseInt($("#AlPha").val()); // ID로 값을 가져옵니다.
+                
+                if(alphaValue < 1) {
+                    mbti = "Alppano";
+                }
+                else if(alphaValue < 19) {
+                    mbti = "Alppano_u";
+                }
+                else if(alphaValue < 25) {
+                    mbti = "Balance";
+                }
+                else if(alphaValue < 28) {
+                    mbti = "Alpha_u";
+                }
+                else mbti = "Alpha";
+
+                // 계산된 MBTI로 이미지, 동물, 설명 값 변경
+                $("#img").attr("src",result[mbti]["img"]);
+            } // 마지막 문제가 아닌 경우
+            else{
+                // 프로그래스 바 1/12씩 차오르도록 구현
+                $(".progress-bar").attr('style','width: calc(100/30*'+num+'%)');
+                // 각 문제별 문제&선택지 출력
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+        }
+    </script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+
+    </article>
+
+</body>
+    </body>
+    
+</html>

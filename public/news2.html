@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <title>뉴스 웹페이지</title>
+    <style>
+        body {
+            font-family: 'Nanum Myeongjo', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            padding: 10px 20px;
+            background-color: #333;
+        }
+        header a img {
+            display: block;
+            width: 55px;
+            height: 55px;
+        }
+        header div {
+            flex-grow: 1;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        article {
+            margin-bottom: 20px;
+            text-align: center;
+            margin-left: 80px;
+            margin-right: 80px;
+            margin-top: 30px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        h1, h2{
+            margin: 0;
+        }
+        h4 {
+            margin-top: 4px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="main.html"><img src="alpha.png" alt="로고" style="width: 55px; height: 55px;"></a>
+        <div onclick="window.location.href='news_main.html';" style="cursor: pointer;">
+            <h1>Alpha News</h1>
+        </div>
+    </header>
+    <main>
+        <!-- <img src="alpha_test_imin.png" alt="광고 하실 분"> -->
+        <article>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div>
+                    <h2>Daily Alpha | 공진우</h2>
+                    <h4>2025.1.20 | Interviewed by Juchan Choi</h4>
+                    <p>Again we met Alpha Male in madcamp.<br>We took an interview with "고상혁."<br>Please enjoy it.</p>
+                </div>
+                <div>
+                    <img src="ko.jpg" alt="첫 번째 뉴스 이미지" style="width: 450px; height: auto;">
+                </div>
+            </div>
+        </article>
+        <article style="text-align: left;">
+            <p style="margin-left: 40px;">
+                Q0. 안녕하세요, Daily Alpha의 알파메일 인터뷰에 응해주셔서 감사합니다. 자기소개 부탁드릴게요.<br><br>
+                A0. 안녕하세요, 저는 고상혁입니다. Daily Alpha의 독자 여러분 모두 반갑습니다. 인터뷰에 초대해 주셔서 감사합니다.<br><br><br><br>
+
+                Q1. 가장 중요하게 여기는 삶의 원칙이나 철학은 무엇인가요?<br><br>
+                A1. 저는 균형을 삶의 핵심 원칙으로 생각합니다. 일을 하든, 휴식을 취하든, 항상 조화를 이루는 상태를 유지하려고 노력합니다.<br>
+                삶의 모든 순간에서 과도함을 경계하고, 스스로를 조화롭게 만드는 것이 제 철학입니다.<br><br><br><br>
+
+                Q2. 위기 상황에서 스스로를 어떻게 다스리고 문제를 해결하나요?<br><br>
+                A2. 저는 위기를 해결할 때 항상 객관적으로 상황을 분석하려고 합니다. 감정에 치우치지 않고, 문제의 핵심을 파악하려 노력하며,<br>
+                우선순위를 정해 하나씩 해결하는 방식을 택합니다. 그리고 나서 더 나은 결과를 위해 주변 사람들의 조언을 적극적으로 구합니다.<br><br><br><br>
+
+                Q3. 다른 사람들에게 영감을 주거나 리더로서 역할을 할 때 가장 중요하다고 생각하는 점은 무엇인가요?<br><br>
+                A3. 진정성이라고 생각합니다. 진심이 담긴 말과 행동은 다른 사람에게 신뢰와 영감을 줍니다. 리더로서,<br>
+                저는 항상 제가 믿는 가치를 솔직하게 전달하고, 구성원들이 스스로를 믿을 수 있도록 지지하는 역할에 집중합니다.<br><br><br><br>
+
+                Q4. 좋은 친구나 동료를 정의할 때, 어떤 자질을 가장 중요하게 생각하나요?<br><br>
+                A4. 좋은 친구는 공감과 배려가 뛰어난 사람이라고 생각합니다. 함께 시간을 보내며 서로의 고민을 나눌 수 있는 관계가 중요합니다.<br>
+                좋은 동료는 책임감을 바탕으로 서로의 성장을 도와줄 수 있는 사람이어야 한다고 믿습니다.<br><br><br><br>
+
+                Q5. 어려운 관계를 극복하거나 갈등을 해결한 경험이 있다면 공유해 주실 수 있나요?<br><br>
+                A5. 과거에 팀 프로젝트에서 의견 충돌이 있었던 적이 있습니다. 모두 각자의 방식이 옳다고 생각하며 갈등이 생겼지만,<br>
+                저는 상대의 입장을 이해하려고 먼저 경청했습니다. 그 결과, 서로의 강점을 조합해 훌륭한 결과를 만들어낼 수 있었습니다.<br><br><br><br>
+
+                Q6. 살면서 가장 큰 실패나 좌절은 무엇이었고, 그것을 통해 무엇을 배웠나요?<br><br>
+                A6. 대학 시절 중요한 시험에서 예상치 못한 점수를 받은 적이 있습니다. 이는 제가 평소보다 준비를 소홀히 했기 때문이었죠.<br>
+                이 경험을 통해 계획과 꾸준함이 얼마나 중요한지 깨달았고, 이후로는 작은 목표라도 철저히 준비하려 노력하고 있습니다.<br><br><br><br>
+
+                Q7. 새로운 기술이나 경험을 받아들이는 데 있어 어떻게 접근하시나요?<br><br>
+                A7. 열린 자세로 다가가되, 체계적으로 접근하려 합니다. 새로운 것을 배우는 데 있어 기본적인 원리를 이해하는 것이 우선이며,<br>
+                작은 실천을 통해 점차 익숙해지는 과정을 즐깁니다. 실패를 두려워하지 않는 마음가짐도 중요하다고 생각합니다.<br><br><br><br>
+
+                Q8. 성공을 정의할 때 어떤 기준을 사용하시나요? 그리고 지금까지 달성한 성공 중 가장 자랑스러운 것은 무엇인가요?<br><br>
+                A8. 성공이란 단순히 결과뿐 아니라 과정에서 성장하고 배우는 것이라고 생각합니다.<br>
+                가장 자랑스러운 성공은 제가 주도적으로 이끌었던 동아리 프로젝트에서 팀원들이 모두 만족스러운 성과를 냈던 순간입니다.<br><br><br><br>
+
+                Q9. 앞으로 이루고 싶은 목표가 있다면, 그것을 위해 어떤 노력을 하고 계신가요?<br><br>
+                A9. 제 목표는 글로벌 IT 전문가로 성장하는 것입니다. 이를 위해 다양한 언어와 기술을 학습하며,<br>
+                다양한 문화와 사람들을 경험할 수 있는 기회를 찾고 있습니다. 특히, 해외 인턴십에 도전하고자 준비 중입니다.<br><br><br><br>
+
+                Q10. 몸과 마음을 건강하게 유지하기 위해 실천하는 습관이나 루틴이 있나요?<br><br>
+                A10. 저는 매일 아침 30분 정도 명상으로 하루를 시작합니다. 명상은 제게 집중력을 높여주고, 마음을 차분하게 만들어 줍니다.<Br>
+                또한 주 3회 조깅과 주말마다 테니스를 하며 몸의 건강도 챙기고 있습니다.<br><br><br><br>
+            </p>
+        </article>
+        <p style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">@daily Alpha</p>
+    </main>
+</body>
+</html>

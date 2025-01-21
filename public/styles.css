@@ -1,0 +1,291 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+
+/* 검색어 랭킹 섹션 스타일 */
+.ranking {
+    flex: 1; /* 유연한 크기 설정 */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 */
+}
+
+.ranking h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.ranking ol {
+    list-style: none;
+    padding: 0;
+}
+
+.ranking ol li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.ranking ol li:hover {
+    color: black; /* 호버 시 텍스트 색 변경 */
+}
+
+
+
+/* CSS: 수평 정렬 스타일 */
+.sub-menu {
+    display: flex; /* 가로 정렬을 위한 flexbox 적용 */
+    margin-top: 20px; /* 메뉴 전체의 상단 여백 */
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 수직 정렬 */
+    list-style: none; /* 불릿 제거 */
+    padding: 15px 0; /* 위/아래 여백 설정 */
+    margin: 0;
+}
+
+.menu-item {
+    margin: 0 10px; /* 항목 간 간격 */
+}
+
+.menu-item button {
+    padding: 10px 15px; /* 버튼 여백 */
+    border: none;
+    background-color: #fff; /* 버튼 배경색 */
+    font-size: 16px; /* 글자 크기 */
+    font-weight: bold; /* 글자 굵기 */
+    color: #6A6464; /* 호버 시 글자색 변경 */
+    cursor: pointer;
+    
+}
+
+.menu-item button:hover {
+    transform: scale(1.1); /* 글자 크기 1.2배 확대 */
+    color: #333; /* 색상 변경 */   
+}
+
+/* 상단 배너 스타일 */
+
+.swiper {
+    width: 100%; /* 화면 전체 너비 */
+    height: 250px; 
+    position: relative; /* 헤더를 Swiper 위에 배치하기 위해 설정 */
+}
+.swiper-slide img {
+    width: 100%; /* 컨테이너 너비에 맞춤 */
+    height: 100%; /* 컨테이너 높이에 맞춤 */
+    object-fit: cover; /* 이미지를 컨테이너에 맞게 채우되, 비율 유지 */
+    object-position: center; /* 이미지의 중심을 기준으로 정렬 */
+}
+
+/* font file loading */
+@font-face {
+    font-family: 'Vogue'; /* 폰트 이름 */
+    src: url('font/vogue.ttf') format('truetype'); /* TTF 파일 경로 */
+    font-weight: bold; /* 폰트 두께 */
+    font-style: normal; /* 폰트 스타일 */
+}
+
+
+/* 상단 고정 헤더 */
+.header {
+    position: absolute; /* Swiper 안에서 위치 고정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* 헤더 높이 */
+    background-color: rgba(255, 255, 255, 0); /* 반투명 배경 */
+    z-index: 10; /* Swiper 위로 표시 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    font-family: 'Vogue', serif; /* Vogue 폰트, 대체 폰트로 serif */
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    padding: 50px 760px 20px 30px; /* 각각 위, 오른쪽, 아래, 왼쪽 여백 */
+}
+
+.header .menu {
+    display: flex;
+    align-items: center;
+}
+
+.header .menu-item {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header .menu-item:hover {
+    transform: scale(1.1); /* 글자 크기 1.2배 확대 */
+    color: #f1f3f5; /* 색상 변경 */   
+}
+
+/*hamburger button with pop-up*/
+
+
+        /* 햄버거 메뉴 아이콘 */
+        .hamburger {
+            margin-right: 60px; /* 햄버거 메뉴와 로고 사이 여백 */
+            cursor: pointer;
+            z-index: 15;
+            padding-top: 1.4px; /* 상단 여백 추가 */
+        }
+
+        .hamburger span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: white;
+            margin: 5px 0;
+            transition: all 0.3s ease-in-out;
+            transform-origin: center; /* 변형 기준점 설정 */
+        }
+        /* 햄버거 버튼 활성화 시 */
+        .hamburger.active span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg); /* 첫 번째 줄 */
+        }
+
+        .hamburger.active span:nth-child(2) {
+        opacity: 0; /* 중간 줄 숨김 */
+        }
+
+        .hamburger.active span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg); /* 세 번째 줄 */
+        }
+
+
+        .header .auth {
+            display: flex;
+            align-items: center;
+            margin-left: auto; /* 로그인/회원가입을 오른쪽으로 밀기 */
+        }
+        
+        .header .auth-item {
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+         /* 풀스크린 팝업 화면 */
+         .fullscreen-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* 투명한 검정 배경 */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            z-index: 20;
+           /* 초기 상태 (오른쪽 상단에서 시작) */
+            opacity: 0; /* 투명도 0% */
+            transform: scale(0) translate(0, 0); /* 크기 축소 (0으로 시작) */
+            transform-origin: top right; /* 변환 기준을 오른쪽 상단으로 설정 */
+            pointer-events: none; /* 클릭 방지 */
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* 부드러운 전환 */
+            
+        }
+
+    
+
+        .fullscreen-menu.active {
+            opacity: 1; /* 투명도 100% */
+            transform: scale(1); /* 원래 크기 */
+            pointer-events: auto; /* 클릭 활성화 */
+            transition: scale(0.9) translateY(-20px);
+        }
+
+        .fullscreen-menu a {
+            display: flex; /* Flexbox 사용 */
+            flex-direction: column; /* 세로 정렬 */
+            justify-content: space-evenly;
+            align-items: center; /* 가로 중앙 정렬 */
+            font-family: 'Vogue', sans-serif;
+            font-size: 42px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            margin: 60px 0px 10px ;
+            transition: color 0.3s;
+            transition: color 0.3s ease-in-out; /* 호버 시 부드러운 색 변화 */
+            transition: transform 0.5s ease, color 0.3s ease; /* 부드러운 전환 */
+        }
+
+        .fullscreen-menu a:hover {
+            color: #333; /* 호버 시 강조 색상 */
+        }
+
+
+
+        /* 팝업 메뉴 */
+    
+        .popup-footer {
+            margin-top: 50px; /* 위쪽 여백 추가 */
+            text-align: center; /* 텍스트 중앙 정렬 */
+        } 
+
+        .popup-footer b {
+            font-family: 'Arial', sans-serif; /* 다른 폰트 지정 */
+            font-size: 14px; /* 폰트 크기 */
+            font-weight: normal; /* 기본 굵기 */
+            color: white;
+            text-decoration: none;
+            margin: 30px 10px;
+            transition: color 0.3s ease-in-out; /* 호버 시 부드러운 색 변화 */
+            transition: transform 0.5s ease, color 0.3s ease; /* 부드러운 전환 */
+            cursor: pointer;
+        }
+        
+        .popup-footer b:hover {
+            color: #333; /* 호버 시 강조 색 */
+            transform: scale(1.05); /* 글자 크기 1.2배 확대 */
+            cursor: pointer;
+        }
+
+        /* 닫기 버튼 */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            background-color: transparent; /* 배경을 투명하게 설정 */
+            border: none; /* 기본 테두리 제거 */
+            cursor: pointer;
+            z-index: 25; /* 다른 요소 위에 표시 */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .close-btn:hover {
+            color: #ccc; /* 닫기 버튼 호버 시 색상 변경 */
+        }
+

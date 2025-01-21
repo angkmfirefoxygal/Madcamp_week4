@@ -1,0 +1,465 @@
+<html lang="ko">
+<head>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>알파메일 자가진단 테스트</title>
+    <meta name="description" content="테스트잇 다꾸 스티커 성격 테스트">
+    <meta name="keywords" content="테스트잇,성격테스트,다꾸 스티커테스트,다꾸 스티커성격테스트,테스트잇연애,테스트잇다꾸스티커성격,다꾸스티커성격테스트결과,연애테스트,연애mbti,연애성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="테스트잇 다꾸 스티커 성격 테스트">
+    <meta property="og:description" content="테스트잇 다꾸 스티커 성격 테스트">
+    <meta property="og:image" content="https://test-it.co.kr/img_main249.png">
+    <meta property="og:url" content="https://test-it.co.kr/test249">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+<style>
+
+/* start 태그와 question 태그 모두 article 태그라서 article 태그에 속성을 주면 동시에 적용됨
+.start{
+    display: flex;
+    flex-direction: column;
+}
+*/
+    
+   @font-face {
+    font-family: 'ChosunGu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    
+      body {
+            font-family: 'ChosunGu', sans-serif;
+        }
+    
+.logo {
+    width: 150px;
+    margin-top: 28px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #c7c7c7;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #000000;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+    
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+ 
+    
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+}
+.progress-bar {
+    background-color: #464644;
+}
+.progress {
+    background-color: #ffffff;
+}
+#img{
+    width: 500px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_main{
+    width: 720px;
+    height: 480px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#question-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.question-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.custom-jelly-button {
+    width: 100%;
+    max-width: 350px;
+    height: 60px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 18px !important;
+    font-weight: bold;
+    color: black !important;
+    background: linear-gradient(145deg, #dbdbdb, #a7a7a7); /* 분홍과 노랑 그라데이션 */
+    border: none;
+    border-radius: 17px;
+    box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.7), 
+                inset 4px 4px 10px rgba(0, 0, 0, 0.1),
+                2px 2px 8px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    display: block;
+}
+
+.custom-jelly-button:hover {
+    background: linear-gradient(145deg, #7a7a7a, #464646); /* 반대로 그라데이션 */
+}
+
+
+
+
+        
+    
+.jelly-question-box {
+    width: 100%;
+    max-width: 400px;
+    min-height: 150px;
+    padding: 30px 20px;
+    margin: 20px auto;
+    background: linear-gradient(145deg, #ffc1cc, #ff91a1); /* 진한 분홍색으로 변경 */
+    border-radius: 25px;
+    box-shadow: inset -6px -6px 12px rgba(255, 255, 255, 0.8), 
+                inset 6px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #432;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* h6 요소의 폰트 크기 강제 적용 */
+.jelly-question-box h6 {
+    font-size: 18px !important;
+    margin-top: 40px;
+}
+    
+.btn-info.focus, .btn-info:focus {
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn-info:hover {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+            box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn-info.focus, .btn-info:focus {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn-info {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+            box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+   
+    
+    
+    .at-share-btn-elements{
+        text-align: center;
+    }
+.share{
+    margin: 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.kakao_ad2{
+    width: 320px;
+    margin: 0 auto;
+}
+/* .coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+} */
+ 
+.custom-button {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+    
+
+  
+</style>
+
+
+
+
+
+</head>
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+            
+    <header class="page-header wrapper">
+        <h1><a href="self_test.html"><img class="logo" src="alpha_test.png" alt="test it"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+            <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+            <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+
+    
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#fed7e0">
+
+
+     <!--시작화면-->
+    <article class="start">
+        <img id="img_main" class="mt-5" src="alpha_test_main.png">
+    <button type="button" class="btn btn-info mt-5 custom-jelly-button" onclick="start();" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 197, 197); border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">테스트 시작하기</button>
+    </article>
+    <!--문제화면-->
+    <article class="question">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/30*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h6 style="font-weight: bold; color: black; font-size: x-large;" class="text-center mt-5" id="title">문제</h6>
+        <input id="type" type="hidden" value="AlPha">
+          <button id="A" type="button" class="btn btn-info mt-5 custom-jelly-button" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 245, 174); border-color: rgb(255, 249, 57); width: 350px; height: 50px; margin: 0 auto; display: block;">Primary</button>
+    <button id="B" type="button" class="btn btn-info mt-3 custom-jelly-button" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 245, 174); border-color: rgb(255, 249, 57); width: 350px; height: 50px; margin: 0 auto; display: block;">Primary</button>
+    </article>
+    <!--결과화면-->
+    <article class="result">
+        <img id="img" class="mt-5" src="" alt="animal">
+        
+
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_inline_share_toolbox_ougq mt-3"></div>
+                
+        <button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick="location.href='test249.html'" style="font-size:large; font-weight: bold;">다시 해보기</button>
+        <button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick="location.href='index.html'" style="font-size:large; font-weight: bold;">다른 테스트 해보기</button>
+    </article>
+                        
+  
+   
+
+
+<!-- <article class="coupang_ad mt-3"> -->
+<!-- <script src="https://ads-partners.coupang.com/g.js"></script> -->
+<script>
+	new PartnersCoupang.G({"id":798186,"template":"carousel","trackingCode":"AF4391881","width":"350","height":"140","tsource":""});
+</script>
+        
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <!--각 타입의 점수를 저장하는 input 태그(hidden으로 안보임)-->
+    <input type="hidden" id="AlPha" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        // 문제 번호를 나타내는 num 변수
+          var num = 1;
+        // 문제 번호별 질문을 저장하는 자바스크립트 객체 q
+             var q = {
+                1: {"title": "A) 어떤 상황에서도 자신감 있게 결정을 내린다.<br><br>or<br><br>B) 결정을 미루거나 남에게 맡긴다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                2: {"title": "A) 처음 보는 사람과도 쉽게 친해질 수 있다.<br><br>or<br><br>B) 아는 사람과만 대화한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                3: {"title": "A) 적극적으로 계획을 세우고 실행한다.<br><br>or<br><br>B) 일정을 주로 즉흥적으로 처리한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                4: {"title": "A) 새로운 시도와 모험을 즐긴다.<br><br>or<br><br>B) 안정된 루틴을 선호한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                5: {"title": "A) 매일 목표를 세우고 성취를 위해 노력한다.<br><br>or<br><br>B) 목표를 세우지 않고 자연스럽게 흐름을 따른다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                6: {"title": "A) 문제에 부딪히면 끝까지 해결하려 한다.<br><br>or<br><br>B) 힘든 상황에서는 포기하거나 도움을 요청한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                7: {"title":" A) 계획적으로 생활하며 미래를 준비한다.<br><br>or<br><br>B) 하루하루를 즉흥적으로 살아간다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                8: {"title": "A) 논리적이고 분석적으로 사고한다.<br><br>or<br><br>B) 직관과 감정을 따라 결정한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                9: {"title": "A) 명확한 경계를 유지하며 관계를 조율한다.<br><br>or<br><br>B) 타인의 요구에 따라 유연하게 대처한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                10: {"title": "A) 신속하고 단호하게 결정을 내린다.<br><br>or<br><br>B) 결정을 고민하며 지연시킨다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                11: {"title": "A) 내가 주도권을 쥐고 팀을 이끈다.<br><br>or<br><br>B) 지시에 따르며 팀에 기여한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                12: {"title": "A) 많은 사람 앞에서 연설하거나 발표하는 것이 즐겁다.<br><br>or<br><br>B) 발표는 부담스럽고 피하고 싶다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                13: {"title": "A) 문제 상황에서 해결책을 찾아 나선다.<br><br>or<br><br>B) 문제가 생기면 누군가 도와주길 기다린다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                14: {"title": "A) 불확실한 상황에서도 과감히 도전한다.<br><br>or<br><br>B) 확실하지 않으면 나서지 않는다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                15: {"title": "A) 체력과 건강 관리를 철저히 한다.<br><br>or<br><br>B) 운동이나 자기 관리를 귀찮아한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                16: {"title": "A) 감정적으로 흔들리지 않고 냉정히 대응한다.<br><br>or<br><br>B) 감정이 쉽게 드러나고 흔들린다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                17: {"title": "A) 목표를 달성하기 위해 철저히 시간 관리를 한다.<br><br>or<br><br>B) 하고 싶은 일이 생기면 즉흥적으로 한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                18: {"title": "A) 목표 달성을 위해 필요한 일을 철저히 한다.<br><br>or<br><br>B) 하고 싶은 일을 우선적으로 한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                19: {"title":" A) 갈등 상황에서도 내 주장을 끝까지 고수한다.<br><br>or<br><br>B) 갈등을 피하려고 타협한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                20: {"title": "A) 결과에 상관없이 책임을 진다.<br><br>or<br><br>B) 책임을 피하려고 노력한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                21: {"title": "A) 의견 충돌 시 상대방을 설득한다.<br><br>or<br><br>B) 조용히 상황을 지켜본다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                22: {"title": "A) 중요한 자리에서 주목받고 싶어 한다.<br><br>or<br><br>B) 뒷자리에서 상황을 지켜보는 게 편하다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                23: {"title": "A) 말보다는 행동이 먼저다.<br><br>or<br><br>B) 신중히 생각하고 행동한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                24: {"title": "A) 위험을 감수하더라도 기회를 잡는다.<br><br>or<br><br>B) 리스크를 회피하고 안전을 중시한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                25: {"title": "A) 실패하더라도 다시 도전한다.<br><br>or<br><br>B) 실패하면 좌절하거나 포기한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                26: {"title": "A) 비판을 긍정적으로 수용하며 발전의 기회로 삼는다.<br><br>or<br><br>B) 비판에 민감하고 방어적으로 반응한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                27: {"title": "A) 자신만의 원칙과 규칙을 지킨다.<br><br>or<br><br>B) 상황에 따라 융통성 있게 변한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                28: {"title": "A) 어려운 문제도 계획적으로 해결한다.<br><br>or<br><br>B) 문제를 단순화하여 쉽게 풀려 한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                29: {"title": "A) 주변 사람들에게 리더로 인정받는다.<br><br>or<br><br>B) 조력자로서 역할을 한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+
+                30: {"title": "A) 내 선택에 자신감을 갖는다.<br><br>or<br><br>B) 선택 후에도 의심하고 후회한다.", "type": "AlPha", "A": "A)", "B": "B)"},
+        }
+
+
+
+
+
+
+
+        // MBTI 결과별 동물&설명을 저장하는 자바스크립트 객체 result
+        var result = {
+            "Alpha": {"img":"result_alpha.png"},
+            "Alpha_u": {"img":"result_alpha_u.png"},
+            "Balance": {"img":"result_balance.png"},
+            "Alppano_u": {"img":"result_alppano_u.png"},
+            "Alppano": {"img":"result_alppano.png"},
+        }
+        // 시작 버튼을 클릭하면 시작화면 숨기고 질문화면 보여주기
+        function start(){
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        // A 버튼 클릭하면 해당 타입 값을 가져와서 값 1 증가 후 next()
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        // B 버튼 클릭하면 값 증가 없이 next()
+        $("#B").click(function(){
+            next();
+        });
+        function next(){
+            // 마지막 문제인 경우
+            if(num==31){
+                // 질문은 숨기고 결과 화면 보여주기
+                $(".question").hide();
+                $(".result").show();
+
+                var mbti = "";
+                var alphaValue = parseInt($("#AlPha").val()); // ID로 값을 가져옵니다.
+                
+                if(alphaValue < 5) {
+                    mbti = "Alppano";
+                }
+                else if(alphaValue < 10) {
+                    mbti = "Alppano_u";
+                }
+                else if(alphaValue < 18) {
+                    mbti = "Balance";
+                }
+                else if(alphaValue < 24) {
+                    mbti = "Alpha_u";
+                }
+                else mbti = "Alpha";
+                // 삼항 연산자를 사용해서 MBTI 계산
+                // ($("#AlPha").val()<5) ? mbti="Alppano" : mbti="Alppano_u";
+                // ($("#AlPha").val()<10 && $("#AlPha").val()>=5) ? mbti="Alppano_u" : mbti="Balance";
+                // ($("#AlPha").val()<18 && $("#AlPha").val()>=10) ? mbti="Balance" : mbti="Alpha_u";
+                // ($("#AlPha").val()<24 && $("#AlPha").val()>=18) ? mbti="Alpha_u" : mbti="Alpha";
+
+                
+                // 계산된 MBTI로 이미지, 동물, 설명 값 변경
+                $("#img").attr("src",result[mbti]["img"]);
+                // $("#animal").html(result[mbti]["animal"]);
+                // $("#explain").html(result[mbti]["explain"]);
+            } // 마지막 문제가 아닌 경우
+            else{
+                // 프로그래스 바 1/12씩 차오르도록 구현
+                $(".progress-bar").attr('style','width: calc(100/30*'+num+'%)');
+                // 각 문제별 문제&선택지 출력
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+
+        }
+    </script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+
+    </article>
+
+</body>
+    </body>
+    
+</html>
