@@ -105,7 +105,7 @@ a {
     padding: 10px 15px; /* 버튼 여백 */
     border: none;
     background-color: #fff; /* 버튼 배경색 */
-    font-size: 16px; /* 글자 크기 */
+    font-size: 20px; /* 글자 크기 */
     font-weight: bold; /* 글자 굵기 */
     color: #6A6464; /* 호버 시 글자색 변경 */
     cursor: pointer;
