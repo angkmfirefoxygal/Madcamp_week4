@@ -62,17 +62,25 @@
         }
         article img {
             width: 150px;
-            height: auto;
+            height: 150px;
             margin-left: 40px;
             margin-bottom: 5px;
+
+            object-fit: cover; /* 이미지를 잘라내면서 영역에 맞춤 */
+            object-position: center; /* 중앙을 기준으로 crop */
         }
         h1, h3, h5 {
             margin: 0;
         }
-        img {
-            max-width: 100%;
-            height: auto;
+     
+        .highlight {
+            background-color: #E5DFEE; /* 강조 색상 */
+            /*border: 2px solid red; /* 테두리 강조 */
         }
+        .article {
+            margin: 10px 0;
+        }
+    
     </style>
 </head>
 <body>
@@ -82,6 +90,7 @@
             <h1>Alpha News</h1>
         </div>        
     </header>
+   
     <main>
         <div style="display: flex; flex-direction: column; gap: 5px;">
             <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
@@ -96,7 +105,7 @@
             <img src="mbti_enfj.png" alt="" style="width: 150px; height: auto;">
         </div>
         
-        <div>
+        <div id="articles">
             <article>
                 <div style="margin-left: 25px">
                     <div onclick="window.location.href='news1.html';" style="cursor: pointer;">
@@ -118,70 +127,127 @@
                 <img src="ko.jpg" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
             </article>
             <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
-                    <p>Coming Soon.</p>
+                <div style="margin-left: 25px;" >
+                    <div class="article" data-article="1" onclick="window.location.href='news3.html';" style="cursor: pointer;">
+                        <h3>Daily Aplha | 002. 송  강</h3>
+                    </div>
+                    <h5>2025.1.18</h5>
+                    <p>ACQUA di PARMA Interview</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="songkang_1.jpg" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
+            </article>
+            <article>
+                <div style="margin-left: 25px">
+                    <div  class="article" data-article="2"onclick="window.location.href='news4.html';" style="cursor: pointer;">
+                        <h3>Daily Alpha | 001. 공진우</h3>
+                    </div>
+                    <h5>2025.1.20</h5>
+                    <p>The 1st Alpha Male</p>
+                </div>
+                <img src="jin.jpg" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
             </article>
             <article>
                 <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
-                    <p>Coming Soon.</p>
+                    <div class="article" data-article="3" onclick="window.location.href='news5.html';" style="cursor: pointer;">
+                        <h3>Daily Aplha | 002. 고상혁</h3>
+                    </div>
+                    <h5>2025.1.21</h5>
+                    <p>그저 대.상.혁</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="ko.jpg" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
+            </article>
+            <article>
+                <div style="margin-left: 25px;" >
+                    <div class="article" data-article="4" onclick="window.location.href='news3.html';" style="cursor: pointer;">
+                        <h3>Daily Aplha | 002. 홍태준</h3>
+                    </div>
+                    <h5>2025.1.18</h5>
+                    <p>Celeb Interview</p>
+                </div>
+                <img src="300ver_1.png" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
+            </article>
+            <article>
+                <div style="margin-left: 25px">
+                    <div onclick="window.location.href='news1.html';" style="cursor: pointer;">
+                        <h3>Daily Alpha | 001. 공진우</h3>
+                    </div>
+                    <h5>2025.1.20</h5>
+                    <p>The 1st Alpha Male</p>
+                </div>
+                <img src="jin.jpg" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
             </article>
             <article>
                 <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
-                    <p>Coming Soon.</p>
+                    <div onclick="window.location.href='news2.html';" style="cursor: pointer;">
+                        <h3>Daily Aplha | 002. 고상혁</h3>
+                    </div>
+                    <h5>2025.1.21</h5>
+                    <p>그저 대.상.혁</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="ko.jpg" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
+            </article>
+            <article>
+                <div style="margin-left: 25px;" >
+                    <div class="article"  onclick="window.location.href='news3.html';" style="cursor: pointer;">
+                        <h3>Daily Aplha | 002. 홍태준</h3>
+                    </div>
+                    <h5>2025.1.18</h5>
+                    <p>Celeb Interview</p>
+                </div>
+                <img src="300ver_1.png" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
+            </article>
+            <article>
+                <div style="margin-left: 25px">
+                    <div onclick="window.location.href='news1.html';" style="cursor: pointer;">
+                        <h3>Daily Alpha | 001. 공진우</h3>
+                    </div>
+                    <h5>2025.1.20</h5>
+                    <p>The 1st Alpha Male</p>
+                </div>
+                <img src="jin.jpg" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
             </article>
             <article>
                 <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
-                    <p>Coming Soon.</p>
+                    <div onclick="window.location.href='news2.html';" style="cursor: pointer;">
+                        <h3>Daily Aplha | 002. 고상혁</h3>
+                    </div>
+                    <h5>2025.1.21</h5>
+                    <p>그저 대.상.혁</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="ko.jpg" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
             </article>
             <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
-                    <p>Coming Soon.</p>
+                <div style="margin-left: 25px;" >
+                    <div class="article" onclick="window.location.href='news3.html';" style="cursor: pointer;">
+                        <h3>Daily Aplha | 002. 홍태준</h3>
+                    </div>
+                    <h5>2025.1.18</h5>
+                    <p>Celeb Interview</p>
                 </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
+                <img src="300ver_1.png" alt="첫 번째 뉴스 이미지" style="margin-left: 400px; margin-bottom: 10px;">
             </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
-                    <p>Coming Soon.</p>
-                </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
-            </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
-                    <p>Coming Soon.</p>
-                </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
-            </article>
-            <article>
-                <div style="margin-left: 25px;">
-                    <h3>Daily Aplha | ?????</h3>
-                    <h5>2025.1.</h5>
-                    <p>Coming Soon.</p>
-                </div>
-                <img src="alpha.png" alt="첫 번째 뉴스 이미지" style="margin-left: 448px; margin-bottom: 10px;">
-            </article>
+            
+            
+           
         </div>
+
+        <script>
+            // URL에서 쿼리 매개변수 읽기
+            const params = new URLSearchParams(window.location.search);
+            const articleId = params.get('article'); // 클릭된 기사 ID
+    
+            // 모든 기사 가져오기
+            const articles = document.querySelectorAll('.article');
+    
+            if (articleId) {
+                articles.forEach(article => {
+                    if (article.dataset.article === articleId) {
+                        article.classList.add('highlight'); // 하이라이트 클래스 추가
+                        article.scrollIntoView({ behavior: 'smooth', block: 'center' }); // 해당 기사로 스크롤 이동
+                    }
+                });
+            }
+        </script>
         <div>
             <img src="mbti_enfj.png" alt="" style="width: 300px; height: auto;">
             <img src="mbti_enfj.png" alt="" style="width: 300px; height: auto;">
