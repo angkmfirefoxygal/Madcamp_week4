@@ -48,9 +48,7 @@ Use this service if you are not an alpha male yet.
   
 ![image4](https://github.com/user-attachments/assets/0d4ef54e-4ffa-43db-bbd8-18e818d11420)
 
-![image5](https://github.com/user-attachments/assets/7eafb0c3-37ff-47fe-9c1e-cc96479bba2d)
-
-- **알파메일 자가진단 ✅**
+![image5](https://git형 자가진단 ✅**
   
     - 성격 유형 테스트할 수 있는 테스트 페이지 제공
  
