@@ -1,7 +1,5 @@
 # Daily Alpha 매일메일 알파메일
 
-![09456c75aabe6c05c1c880f9e7ee277b](https://github.com/user-attachments/assets/0fb7acc4-b403-48e8-b4da-a9efc7affeba)
-
 This is the git repository for 2024 winter madcamp.
 
 It provides services which can be an alpha male.
