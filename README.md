@@ -48,13 +48,14 @@ Use this service if you are not an alpha male yet.
   
 ![image4](https://github.com/user-attachments/assets/0d4ef54e-4ffa-43db-bbd8-18e818d11420)
 
-![image5](https://git형 자가진단 ✅**
+- **알파메일 자가진단 ✅**
   
-    - 성격 유형 테스트할 수 있는 테스트 페이지 제공
+    - 스스로가 알파메일인지 테스트할 수 있는 테스트 페이지 제공
  
     - 테스트 결과에 따라 자가진단 가능
  
     - 총 3개의 테스트 제공
+
 
 
 
